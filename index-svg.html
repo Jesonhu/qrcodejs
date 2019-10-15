@@ -16,7 +16,13 @@
   var qrcode = new QRCode(document.getElementById("qrcode"), {
       width : 100,
       height : 100,
-      useSVG: true
+      useSVG: true,
+      done: function () {
+        console.log('draw done');
+      },
+      fail: function () {
+        console.log('draw fail');
+      }
   });
 
   function makeCode () {		
