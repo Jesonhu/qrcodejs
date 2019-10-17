@@ -26,7 +26,7 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 		console.log('draw done');
 	},
 	fail: function (err) {
-    	console.log('draw fail', err);
+		console.log('draw fail', err);
 	}
 });
 </script>
