@@ -23,11 +23,11 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 	colorLight : "#ffffff",
 	correctLevel : QRCode.CorrectLevel.H,
 	done: function () {
-        console.log('draw done');
-    },
-    fail: function (err) {
-        console.log('draw fail', err);
-    }
+		console.log('draw done');
+	},
+	fail: function (err) {
+    	console.log('draw fail', err);
+	}
 });
 </script>
 ```
