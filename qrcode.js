@@ -10,9 +10,9 @@
  * @modify silverbulletlee
  */
 (function (root, factory) {
-	if (typeof define == 'function' && define.amd) {
-		define('qrcode', factory);
-	} else if (typeof exports == 'object') {
+	if (typeof define === 'function' && define.amd) {
+		define('QRCode', factory);
+	} else if (typeof module === 'object' && typeof exports === 'object') {
 		module.exports = factory();
 	} else {
 		root.QRCode = factory();
