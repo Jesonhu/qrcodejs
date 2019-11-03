@@ -42,7 +42,7 @@ qrcode.makeCode("http://naver.com"); // make another code.
 
 最近有一个需求，需要将连接转换为二维码。
 
-直接找了github最多star的库 [https://github.com/noteScript/qrcodejs](https://github.com/noteScript/qrcodejs)。
+直接找了github最多star的库 [https://github.com/davidshimjs/qrcodejs](https://github.com/davidshimjs/qrcodejs)。
 
 在使用中遇到了一些小问题，并且这个库很久不维护了，加上遇到的问题网上并没有很好的解决方案，所以fork一下修改源码，方便个人后续使用。
 
@@ -76,9 +76,9 @@ qrcode.makeCode("http://naver.com"); // make another code.
 
 ```
 (function (root, factory) {
-	if (typeof define == 'function' && define.amd) {
-		define('qrcode', factory);
-	} else if (typeof exports == 'object') {
+	if (typeof define === 'function' && define.amd) {
+		define('QRCode', factory);
+	} else if (typeof module === 'object' && typeof exports === 'object') {
 		module.exports = factory();
 	} else {
 		root.QRCode = factory();
@@ -184,13 +184,13 @@ webpack
 npm install @roronoalee/qrcodejs
 ```
 ```
-import QRcode from '@roronoalee/qrcodejs'
+import QRCode from '@roronoalee/qrcodejs'
 ```
 
 amd 
 
 ```
-require(['qrcode'], function (QRcode) {
+require(['QRCode'], function (QRcode) {
 	// ... your code
 });
 ```
